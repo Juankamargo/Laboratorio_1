@@ -40,8 +40,7 @@ public class DF2 {
             }
             contador++;
             System.out.println("");
-        }
-        
+        }        
     }
         // TODO code application logic here
     }
