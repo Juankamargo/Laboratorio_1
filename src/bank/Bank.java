@@ -16,11 +16,75 @@ public class Bank {
      */
     public static void main(String[] args) 
     {
-     
+        int n = 0;
+        java.util.Scanner read = new java.util.Scanner(System.in);
+        System.out.println("Enter the number of accounts.");
+        n = read.nextInt();
+        Account[] accounts;
+        accounts = new Account[n];
+        for(int i=1;i<=n;i++)
+        {
+            accounts[i] = new Account();
+            System.out.println("Creating account number "+ i);
+            accounts[i].createAccount();
+        }
+        System.out.println("You´re done creating the accounts.");
         
-        Account ac1 = new Account();
-        ac1.createAccount();
-        ac1.printAccount();
+        while(1<2)
+        {
+        System.out.println("Select an account to make an operation.");
+        int se;
+        for(int i=1;i<=n;i++)
+        {
+            System.out.println("Account's owner: " + accounts[i].showOwner());
+        }
+        se = read.nextInt();
+        System.out.println("Select an operation.");
+        System.out.println("1.  Consign money");
+        System.out.println("2.  Retire money");
+        System.out.println("3.  Change access code");
+        System.out.println("4.  Check info of an account");
+        
+        switch(se)
+        {
+            case 1:
+                    {
+                        System.out.println("Enter the money to consign: ");
+                        double money = 0;
+                        money = read.nextDouble();
+                        accounts[se].consign(money);
+                        System.out.println("New balance:  " + accounts[1].Balance());
+                        break;
+                    }
+            case 2:
+                    {
+                        System.out.println("Enter the money to retire: ");
+                        double money = 0;
+                        money = read.nextDouble();
+                        accounts[se].retire(money);
+                        System.out.println("New balance:  " + accounts[1].Balance());
+                        break;
+                    }
+            case 3:
+                    {
+                        System.out.println("Enter the new access code: ");
+                        int money = 0;
+                        money = read.nextInt();
+                        accounts[se].changeAccessCode(money);
+                        System.out.println("Access code changed correctly.");
+                        break;
+                    }
+            case 4:
+                    {
+                        accounts[se].printAccount();
+                        break;
+                    }
+            default:
+            {
+                System.out.println("Enter a valid option.");
+            }
+            
+        }
+        }
     }
-    
 }
