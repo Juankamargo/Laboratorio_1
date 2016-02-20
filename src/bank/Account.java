@@ -16,7 +16,10 @@ public class Account
     private int accessCode;
     private String Owner;
     private double balance; 
-    
+    public Account()
+    {
+
+    }
     public void consign (double moneyToConsign)
     {
         this.balance = this.balance+moneyToConsign;
@@ -46,9 +49,9 @@ public class Account
     }
     public void createAccount()
     {
-        String number;
+        String number = new String();
         int accessCode; 
-        String owner = "..";
+        String owner = new String();
         double balance;
         System.out.println("You´re about to create an account. Enter the information of the account below.");
         System.out.println("Enter the number of the account.");
