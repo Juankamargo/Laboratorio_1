@@ -7,7 +7,7 @@ package bank;
 
 /**
  *
- * @author usuario
+ * @author Juan Carlos Camargo Lizarazo
  */
 public class Bank {
 
@@ -16,7 +16,7 @@ public class Bank {
      */
     public static void main(String[] args) 
     {
-        int n = 0;
+        int n ;
         java.util.Scanner read = new java.util.Scanner(System.in);
         System.out.println("Enter the number of accounts.");
         n = read.nextInt();
@@ -50,7 +50,7 @@ public class Bank {
             case 1:
                     {
                         System.out.println("Enter the money to consign: ");
-                        double money = 0;
+                        double money;
                         money = read.nextDouble();
                         accounts[se].consign(money);
                         System.out.println("New balance:  " + accounts[1].Balance());
@@ -59,7 +59,7 @@ public class Bank {
             case 2:
                     {
                         System.out.println("Enter the money to retire: ");
-                        double money = 0;
+                        double money ;
                         money = read.nextDouble();
                         accounts[se].retire(money);
                         System.out.println("New balance:  " + accounts[1].Balance());
@@ -68,7 +68,7 @@ public class Bank {
             case 3:
                     {
                         System.out.println("Enter the new access code: ");
-                        int money = 0;
+                        int money ;
                         money = read.nextInt();
                         accounts[se].changeAccessCode(money);
                         System.out.println("Access code changed correctly.");
@@ -84,7 +84,7 @@ public class Bank {
                 System.out.println("Enter a valid option.");
             }
             
-        }
+            }
         }
     }
 }
