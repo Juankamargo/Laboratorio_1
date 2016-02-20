@@ -49,9 +49,9 @@ public class Account
     }
     public void createAccount()
     {
-        String number = new String();
+        String number;
         int accessCode; 
-        String owner = new String();
+        String owner;
         double balance;
         System.out.println("You´re about to create an account. Enter the information of the account below.");
         System.out.println("Enter the number of the account.");
