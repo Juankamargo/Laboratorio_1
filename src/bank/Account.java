@@ -20,29 +20,37 @@ public class Account
     public void consign (double moneyToConsign)
     {
         this.balance = this.balance+moneyToConsign;
-        System.out.println(moneyToConsign + "have been consigned to " + Owner + "new balance is: " + this.balance);
+        System.out.println(moneyToConsign + "have been consigned to " + Owner + " new balance is: " + this.balance);
     }
     public void retire (double moneyToRetire)
     {
         this.balance = this.balance-moneyToRetire;
-        System.out.println(moneyToRetire + "have been retired from " + Owner + "new balance is: " + this.balance);
+        System.out.println(moneyToRetire + "have been retired from " + Owner + " new balance is: " + this.balance);
     }
     public void changeAccessCode (int newAccessCode)
     {
         this.accessCode = newAccessCode;
-        System.out.println(this.Owner + "code acess has been changed to " + newAccessCode);
+        System.out.println(this.Owner + " code acess has been changed to " + newAccessCode);
     }
     public void checkBalance ()
     {
-        System.out.println(this.Owner + "balance is:  " + this.balance);
+        System.out.println(this.Owner + " balance is:  " + this.balance);
     }
-    
+        public double Balance ()
+    {
+        return this.balance;
+    }
+    public String showOwner ()
+    {
+        return this.Owner;
+    }
     public void createAccount()
     {
         String number;
         int accessCode; 
         String owner = "..";
         double balance;
+        System.out.println("You´re about to create an account. Enter the information of the account below.");
         System.out.println("Enter the number of the account.");
         number = read.nextLine();
         System.out.println("The number " + number + " is now the account's number.");
